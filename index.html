@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Habit Tracker</title>
+		<link rel="stylesheet" href="./style.css" />
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<div class="header__inner">
+					<a href="#" class="header__logo">HabitTracker</a>
+					<button class="btn create-habit">+ Add Habit</button>
+				</div>
+			</div>
+		</header>
+
+		<section>
+			<div class="container">
+				<div class="habits__inner"></div>
+			</div>
+		</section>
+
+		<div class="modal">
+			<div class="modal__content">
+				<h3 class="modal__title">Habit Creator</h3>
+				<form class="modal__form">
+					<input
+						class="modal__form-name"
+						type="text"
+						placeholder="Enter habit name"
+					/>
+					<input
+						class="modal__form-goal"
+						type="number"
+						placeholder="Enter goal in days"
+					/>
+					<button class="btn" type="submit">Create</button>
+				</form>
+				<button class="modal__close">
+					<svg
+						id="Close_24"
+						width="24"
+						height="24"
+						viewBox="0 0 24 24"
+						xmlns="http://www.w3.org/2000/svg"
+						xmlns:xlink="http://www.w3.org/1999/xlink"
+					>
+						<rect
+							width="24"
+							height="24"
+							stroke="none"
+							fill="var(--text-color)"
+							opacity="0"
+						/>
+						<g transform="matrix(0.83 0 0 0.83 12 12)">
+							<g>
+								<g transform="matrix(1 0 0 1 0 0)">
+									<path
+										style="
+											stroke: var(--text-color);
+											stroke-width: 1.5;
+											stroke-dasharray: none;
+											stroke-linecap: round;
+											stroke-dashoffset: 0;
+											stroke-linejoin: round;
+											stroke-miterlimit: 4;
+											fill: none;
+											fill-rule: nonzero;
+											opacity: 1;
+										"
+										transform=" translate(-12, -12)"
+										d="M 0.75 23.249 L 23.25 0.749"
+										stroke-linecap="round"
+									/>
+								</g>
+								<g transform="matrix(1 0 0 1 0 0)">
+									<path
+										style="
+											stroke: var(--text-color);
+											stroke-width: 1.5;
+											stroke-dasharray: none;
+											stroke-linecap: round;
+											stroke-dashoffset: 0;
+											stroke-linejoin: round;
+											stroke-miterlimit: 4;
+											fill: none;
+											fill-rule: nonzero;
+											opacity: 1;
+										"
+										transform=" translate(-12, -12)"
+										d="M 23.25 23.249 L 0.75 0.749"
+										stroke-linecap="round"
+									/>
+								</g>
+							</g>
+						</g>
+					</svg>
+				</button>
+			</div>
+		</div>
+
+		<script src="./js/utils.js" type="module"></script>
+		<script src="./js/classes.js" type="module"></script>
+		<script src="./js/script.js" type="module"></script>
+	</body>
+</html>
