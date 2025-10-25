@@ -275,3 +275,15 @@ header {
 
 	cursor: pointer;
 }
+
+.goal-error {
+	color: #dc143c;
+	font-size: 0.75rem;
+	margin-top: -1rem;
+
+	display: none;
+}
+
+.goal-error.active {
+	display: block;
+}

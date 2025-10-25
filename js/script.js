@@ -40,7 +40,18 @@ document.addEventListener('DOMContentLoaded', function () {
 		const modalFormName = document.querySelector('.modal__form-name')
 		const modalFormGoal = document.querySelector('.modal__form-goal')
 
-		if (modalFormName.value.trim() && modalFormGoal.value.trim()) {
+		const goalErrorAlert = document.querySelector('.goal-error')
+
+		if (modalFormGoal.value <= 0 || Number.isNaN(+modalFormGoal.value)) {
+			goalErrorAlert.classList.add('active')
+		}
+
+		if (
+			modalFormName.value.trim() &&
+			modalFormGoal.value.trim() &&
+			!Number.isNaN(+modalFormGoal.value) &&
+			modalFormGoal.value > 0
+		) {
 			const newHabit = new Habit({
 				title: modalFormName.value,
 				goalInDays: +modalFormGoal.value,
@@ -48,6 +59,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 			habitsList.addHabit(newHabit)
 
+			goalErrorAlert.classList.remove('active')
 			modalFormName.value = ''
 			modalFormGoal.value = ''
 			closeModal(habitCreateModal)
